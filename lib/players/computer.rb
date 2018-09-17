@@ -1,9 +1,5 @@
 module Players
   class Computer < Player
-    # def move(board)
-    #   computer_move = (1..9).detect { |n| board.valid_move?(n) }
-    #   computer_move.to_s
-    # end
 
     def move(board)
       computer_move = nil
@@ -27,7 +23,6 @@ module Players
         computer_move = [1, 3, 7, 9, 2, 4, 6, 8].detect{|i| !board.taken?(i)}.to_s if computer_move == nil
         end
       computer_move.to_s
-
     end
   end
 end
